@@ -1,0 +1,311 @@
+/* purgecss start ignore */
+
+.validation_error {
+  @apply text-red-600 pb-4;
+}
+
+.validation_message {
+  @apply text-red-600 pt-1;
+}
+
+.gform_validation_container {
+  @apply hidden;
+}
+
+.gfield_visibility_hidden {
+  @apply hidden;
+}
+
+.gform_ajax_spinner {
+  @apply hidden;
+}
+
+.gfield_error {
+  .validation_message {
+    @apply hidden;
+  }
+  .ginput_container input[type=text], .ginput_container input[type=email], textarea, select {
+    @apply border-2 border-red-400 box-border;
+  }
+  .ginput_container_consent {
+    input[type=checkbox] {
+      @apply border-2 border-red-400 box-border;
+    }
+  }
+}
+
+.gform_fields {
+  @apply list-none #{!important};
+}
+
+.hidden_label {
+  .gfield_label {
+    @apply hidden;
+  }
+}
+
+// .form-checkbox:checked{
+//   background-image: url('../images/checkmark.svg');
+//   border-color: transparent;
+//   background-color: currentColor;
+//   background-size: 75% 75%;
+//   background-position: center;
+//   background-repeat: no-repeat;
+// }
+
+// .ginput_container_select {
+//   @apply relative z-10 cursor-pointer;
+//   &:before {
+//     @apply fill-current stroke-current;
+//     position: absolute;
+//     content: '';
+//     mask: url('../images/cheveron-down.svg') no-repeat 50% 50%;
+//     height: 20px;
+//     width: 20px;
+//     top: 12px;
+//     right: 10px;
+//     z-index:20;
+//     pointer-events: none;
+//   }
+//   select{
+//     @apply appearance-none cursor-pointer;
+//   }
+// }
+
+.gform_wrapper {
+  @apply w-full text-black text-left;
+}
+.gfield {
+  @apply mb-4;
+}
+.ginput_container input[type=text], .ginput_container input[type=email], textarea, select {
+  @apply w-full py-3 px-3 text-base border border-gray-400 rounded;
+  &::placeholder {
+    @apply opacity-75 tracking-wide text-base;
+  }
+  &:focus {
+    @apply outline-none;
+  }
+}
+.ginput_container textarea {
+  @apply h-32;
+}
+.gform_button {
+  @apply w-full text-white py-3 text-lg uppercase font-bold tracking-wider leading-normal;
+  &:hover {
+    @apply cursor-pointer;
+  }
+}
+.gfield_required {
+  @apply hidden;
+}
+
+#gform_1 {
+  .gfield_label {
+    @apply text-white font-semibold;
+  }
+  .gform_footer {
+    @apply mt-6;
+    input[type=submit] {
+      @apply bg-p-orange font-semibold rounded transition transform duration-150;
+      box-shadow: 0px 0.25rem 0px #d4791b;
+      &:hover {
+        @apply shadow-none translate-y-1;
+      }
+    }
+  }
+}
+
+@screen md {
+  #gform_1 {
+    @apply flex;
+    .gform_fields {
+      @apply flex;
+    }
+    .gform_body {
+      @apply w-3/4;
+    }
+    .gform_footer {
+      @apply w-1/4;
+      input[type=submit] {
+        @apply text-base;
+      }
+    }
+    .gfield {
+      @apply w-full mr-6;
+    }
+    .gfield_label {
+      @apply mb-2;
+    }
+  }
+}
+
+@screen lg {
+  #gform_1 {
+    @apply max-w-4xl mx-auto;
+    .gfield {
+      @apply mr-8;
+    }
+  }
+}
+
+#gform_2 {
+  @apply text-p-gray-100;
+  .ginput_container input[type=text], .ginput_container input[type=email], textarea, select {
+    @apply rounded shadow-xs shadow shadow-md;
+  }
+  .gform_footer {
+    @apply mt-6;
+    input[type=submit] {
+      @apply bg-p-blue-200 font-semibold rounded transition transform duration-150;
+      box-shadow: 0px 0.25rem 0px #119c9e;
+      &:hover {
+        @apply shadow-none translate-y-1;
+      }
+    }
+  }
+}
+
+@screen md{
+  #gform_2 {
+    .gform_footer {
+      @apply text-center;
+      input[type=submit] {
+        @apply w-auto px-8 py-3;
+      }
+    }
+    .gform_fields {
+      @apply grid grid-cols-2 gap-4;
+      li {
+        @apply mb-0;
+      }
+    }
+    #field_2_3 {
+      @apply col-span-2;
+    }
+  }
+}
+
+@screen lg{
+  #gform_2 {
+    .gform_footer {
+      @apply text-left;
+    }
+  }
+}
+
+//Review form 
+
+.gsurvey-rating:not(:checked) > label {
+  @apply h-8 w-8 bg-contain;
+  font-size: 18px!important;
+  line-height: 18px;
+  color: transparent;
+  background-image: url(../images/star.svg);
+}
+
+.gsurvey-rating > input:checked ~ label {
+  @apply h-8 w-8 bg-contain;
+  background-image: url(../images/star-full.svg);
+  color: transparent;
+}
+
+.gsurvey-rating:not(:checked) > label:hover,
+.gsurvey-rating:not(:checked) > label:hover ~ label {
+  @apply h-8 w-8 bg-contain;
+  background-image: url(../images/star-full.svg);
+  color: transparent;
+}
+
+.gsurvey-rating > input:checked + label:hover,
+.gsurvey-rating > input:checked + label:hover ~ label,
+.gsurvey-rating > input:checked ~ label:hover,
+.gsurvey-rating > input:checked ~ label:hover ~ label,
+.gsurvey-rating > label:hover ~ input:checked ~ label {
+    color: transparent;
+}
+
+#gform_3 {
+  @apply text-p-gray-100 my-8 mb-12;
+  #field_3_1 {
+    @apply flex flex-col mb-0;
+    div {
+      &:after {
+        @apply clear-both;
+        content: " ";
+        display: table;
+      }
+    }
+    .gfield_label {
+      @apply text-p-gray-300 font-semibold mr-2 text-lg;
+    }
+    .gsurvey-rating {
+      @apply py-2;
+    }
+  }
+  .ginput_container input[type=text], .ginput_container input[type=email], textarea, select {
+    @apply rounded shadow-xs shadow shadow-md;
+  }
+  .gform_footer {
+    @apply mt-4;
+    input[type=submit] {
+      @apply bg-p-blue-200 font-semibold rounded transition transform duration-150;
+      box-shadow: 0px 0.25rem 0px #119c9e;
+      &:hover {
+        @apply shadow-none translate-y-1;
+      }
+    }
+  }
+}
+
+@screen md {
+  #gform_3 {
+    @apply mb-16;
+    #field_3_1 {
+      @apply flex flex-row mb-2 items-center;
+      .gsurvey-rating {
+        @apply py-0;
+      }
+    }
+    .gform_footer {
+      @apply text-right;
+      input[type=submit] {
+        @apply w-auto px-8 py-3;
+      }
+    }
+  }
+}
+
+@screen lg {
+  #gform_3 {
+    @apply max-w-4xl mx-auto px-8 mb-12;
+  }
+}
+
+#gform_4 {
+  ul {
+    @apply list-none ml-0;
+  }
+  .gfield_checkbox {
+    li {
+      @apply py-1;
+    }
+    label {
+      @apply pl-1 text-sm;
+    }
+    input:checked {
+      @apply bg-p-orange;
+    }
+  }
+  .gform_footer {
+    @apply mt-4;
+    input[type=submit] {
+      @apply bg-p-blue-200 font-semibold rounded transition transform duration-150;
+      box-shadow: 0px 0.25rem 0px #119c9e;
+      &:hover {
+        @apply shadow-none translate-y-1;
+      }
+    }
+  }
+}
+/* purgecss end ignore */

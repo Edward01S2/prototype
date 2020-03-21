@@ -1,0 +1,22 @@
+/**
+ * Header
+ */
+
+.active {
+  @apply text-p-teal;
+}
+
+.course_header {
+  @apply uppercase font-semibold;
+  &:hover {
+    @apply bg-transparent cursor-default text-gray-400;
+  }
+}
+
+@screen md {
+  .course_header {
+    &:hover {
+      @apply text-gray-700;
+    }
+  }
+}

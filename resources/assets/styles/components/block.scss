@@ -1,0 +1,19 @@
+/* purgecss start ignore */
+//Feature3Columnn
+@screen lg {
+  .half-blue {
+    background: linear-gradient(0deg, #eff8f7 50%, transparent 50%)
+  }
+}
+
+//Split Content
+.split-content {
+  p {
+    @apply mb-4;
+  }
+  strong {
+    @apply text-p-gray-300;
+  }
+}
+
+/* purgecss end ignore */

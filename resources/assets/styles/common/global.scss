@@ -1,0 +1,39 @@
+/**
+ * Global
+ */
+
+html {
+  @apply font-mont;
+}
+
+p {
+  @apply mb-4 leading-7;
+}
+h2 {
+  @apply font-semibold text-2xl mb-4 text-p-gray-300;
+}
+h3 {
+  @apply font-semibold text-xl mb-4 text-p-gray-300;
+}
+strong {
+  @apply font-semibold text-p-gray-300;
+}
+
+// a {
+//   color: map-get($theme-colors, 'primary');
+// }
+
+// /**
+//  * Block editor color palette utilities
+//  * @see https://git.io/JeyD6
+//  */
+
+// @each $color-name, $color-value in $theme-colors {
+//   .has-#{$color-name}-color {
+//     color: $color-value;
+//   }
+
+//   .has-#{$color-name}-background-color {
+//     background-color: $color-value;
+//   }
+// }
