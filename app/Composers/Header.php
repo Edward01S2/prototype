@@ -39,7 +39,7 @@ class Header extends Composer
                 }
                 
                 //Check current requested url against url and add class active if true
-                if(($active = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]") == $m->url) {
+                if(($active = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]")  == $m->url) {
                   //$menu[$m->ID]['active'] = $active;
                   if(isset($classes)) {
                     array_push($classes, 'active');
@@ -63,7 +63,7 @@ class Header extends Composer
                   //$submenu[$m->ID]['classes'] = implode(" ", $classes);
                 }
 
-                if(($active = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]") == $m->url) {
+                if(($active = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]") == $m->url) {
                   //$menu[$m->ID]['active'] = $active;
                   if(isset($classes)) {
                     array_push($classes, 'active');
