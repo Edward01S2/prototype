@@ -2,7 +2,11 @@
   <div class="relative max-w-xl mx-auto px-4 sm:px-6 lg:px-8 lg:max-w-screen-xl">
 
     <div class="relative">
-      <h2 class="text-center text-2xl leading-8 font-semibold tracking-tight text-p-gray-300">
+      @php
+        $res = strtolower($title);
+        $res = str_replace(' ', '-', $res);
+      @endphp
+      <h2 id="{!! $res !!}"class="text-center text-2xl leading-8 font-semibold tracking-tight text-p-gray-300">
         {!! $title !!}
       </h3>
     </div>

@@ -222,7 +222,11 @@
 .gsurvey-rating > input:checked ~ label:hover,
 .gsurvey-rating > input:checked ~ label:hover ~ label,
 .gsurvey-rating > label:hover ~ input:checked ~ label {
-    color: transparent;
+  @apply h-8 w-8 bg-contain;
+  font-size: 18px!important;
+  line-height: 18px;
+  color: transparent;
+  background-image: url(../images/star-full.svg);
 }
 
 #gform_3 {

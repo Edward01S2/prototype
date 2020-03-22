@@ -4,6 +4,7 @@ const mix = require('laravel-mix');
             require('laravel-mix-copy-watched');
 
 const tailwindcss = require('tailwindcss');
+const whitelister = require('purgecss-whitelister');
 
 /*
  |--------------------------------------------------------------------------
@@ -25,7 +26,13 @@ mix.sass('resources/assets/styles/app.scss', 'styles')
       processCssUrls: false,
       postCss: [ tailwindcss('tailwind.config.js')]
    })
-   .purgeCss();
+   .purgeCss({
+      whitelist: [
+         whitelister(
+            './resources/assets/styles/partials/header.scss'
+         )
+      ],
+   });
 
 mix.js('resources/assets/scripts/app.js', 'scripts')
    .js('resources/assets/scripts/customizer.js', 'scripts')

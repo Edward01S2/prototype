@@ -1,6 +1,10 @@
 <div class="py-12 bg-p-teal-200 half-blue lg:-mt-96">
   <div class="max-w-xl mx-auto px-4 sm:px-6 lg:max-w-screen-xl lg:px-8">
-    <h2 class="text-center font-semibold text-xl mb-8 leading-tight lg:text-white lg:text-2xl">{!! $title !!}</h2>
+    @php
+      $res = strtolower($title);
+      $res = str_replace(' ', '-', $res);
+    @endphp
+    <h2 id="{!! $res !!}" class="text-center font-semibold text-xl mb-8 leading-tight lg:text-white lg:text-2xl">{!! $title !!}</h2>
     <div class="lg:grid lg:grid-cols-3 lg:gap-4 xl:gap-8">
       @foreach($courses as $c)
         <div class="mb-12 bg-white shadow-xs rounded shadow shadow-md shadow-lg py-8 md:py-12 lg:flex lg:flex-col lg:justify-between">
