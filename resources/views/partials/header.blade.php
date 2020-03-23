@@ -1,11 +1,11 @@
 <header>
   <nav x-data="{ open: false }" class="bg-black">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
-      <div class="flex items-center justify-between h-16">
+      <div class="flex items-center justify-between h-20">
         <div class="flex items-center">
           <div class="flex-shrink-0">
             <a href="{{ home_url('/') }}">
-              <img class="block h-8 w-auto" src="{!! $logo['url'] !!}" alt="{{ $siteName }}" />
+              <img class="block h-16 w-auto" src="{!! $logo['url'] !!}" alt="{{ $siteName }}" />
             </a>
           </div>
         </div>
