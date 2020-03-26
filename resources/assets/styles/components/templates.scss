@@ -182,6 +182,7 @@
   }
   .triangle {
     &:after {
+      @apply border border-p-orange;
       content: '';
       position: absolute;
       top: 100%;

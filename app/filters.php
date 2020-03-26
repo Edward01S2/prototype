@@ -62,3 +62,8 @@ function populate_checkbox( $form ) {
  
     return $form;
 }
+
+add_filter( 'gform_tabindex_1', __NAMESPACE__  . '\\change_tabindex' , 10, 2 );
+function change_tabindex( $tabindex, $form ) {
+    return 49;
+}

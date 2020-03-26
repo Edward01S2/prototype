@@ -62,3 +62,9 @@ add_filter( 'block_editor_settings' , function($settings) {
     unset($settings['styles'][0]);
     return $settings;
 });
+
+//Remove Yoast from Dashboard
+add_action('wp_dashboard_setup', function() {
+  // In some cases, you may need to replace 'side' with 'normal' or 'advanced'.
+  remove_meta_box( 'wpseo-dashboard-overview', 'dashboard', 'side' );
+});

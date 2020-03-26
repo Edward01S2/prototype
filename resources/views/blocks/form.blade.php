@@ -11,7 +11,7 @@
   @endif
   @if(is_singular('course'))
   <div class="course-heading bg-p-orange text-center rounded-t triangle relative">
-    <h3 class="text-white text-2xl pt-4 relative leading-none md:pt-6 md:text-3xl">Coming Soon</h3>
+    <h3 class="text-white text-2xl pt-4 pb-1 relative leading-none md:pt-6 md:text-3xl">Coming Soon</h3>
   </div> 
   @endif
 @php
