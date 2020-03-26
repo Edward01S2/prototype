@@ -229,9 +229,9 @@
   background-image: url(../images/star-full.svg);
 }
 
-#gform_3 {
+#gform_3, #gform_5, #gform_6, #gform_7 {
   @apply text-p-gray-100 my-8 mb-12;
-  #field_3_1 {
+  #field_3_1, #field_5_1, #field_6_1, #field_7_1 {
     @apply flex flex-col mb-0;
     div {
       &:after {
@@ -263,9 +263,9 @@
 }
 
 @screen md {
-  #gform_3 {
+  #gform_3, #gform_5, #gform_6, #gform_7 {
     @apply mb-16;
-    #field_3_1 {
+    #field_3_1, #field_5_1, #field_6_1, #field_7_1 {
       @apply flex flex-row mb-2 items-center;
       .gsurvey-rating {
         @apply py-0;
@@ -281,7 +281,7 @@
 }
 
 @screen lg {
-  #gform_3 {
+  #gform_3, #gform_5, #gform_6, #gform_7 {
     @apply max-w-4xl mx-auto px-8 mb-12;
   }
 }

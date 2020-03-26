@@ -14,9 +14,9 @@
               </button>
               <div class="ml-2 font-semibold mt-1 text-p-gray-300">{!! $i['Question'] !!}</div>
             </div>
-            <p x-show="open" class="ml-8 mt-2">
+            <div x-show="open" class="ml-8 mt-2 faq-content">
               {!! $i['Answer'] !!}
-            </p>
+            </div>
 
           </div>
         @endforeach
