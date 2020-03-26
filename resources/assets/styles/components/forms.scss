@@ -117,22 +117,27 @@
 }
 
 @screen md {
+  #gform_wrapper_1 {
+    @apply mx-auto max-w-2xl relative;
+  }
   #gform_1 {
-    @apply flex;
     .gform_fields {
-      @apply flex;
+      @apply flex flex-wrap;
+      li:nth-child(even) {
+        @apply mr-0;
+      }
     }
     .gform_body {
-      @apply w-3/4;
+      @apply w-full;
     }
     .gform_footer {
-      @apply w-1/4;
+      @apply w-76 absolute bottom-0 right-0 mt-0 mb-5 mr-2;
       input[type=submit] {
         @apply text-base;
       }
     }
     .gfield {
-      @apply w-full mr-6;
+      @apply mr-6 w-76;
     }
     .gfield_label {
       @apply mb-2;
@@ -145,6 +150,9 @@
     @apply max-w-4xl mx-auto;
     .gfield {
       @apply mr-8;
+    }
+    .gform_footer {
+      @apply mr-0;
     }
   }
 }

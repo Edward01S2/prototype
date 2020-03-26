@@ -3,7 +3,7 @@
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="text-white">
         <div class="py-12">
-          <h3 class="text-center font-semibold text-white text-xl pb-4 md:pb-8">{!! $form_title !!}</h3>
+          <h3 class="text-center font-semibold text-white text-xl pb-4 md:pb-0">{!! $form_title !!}</h3>
           @include('partials.forms', ['form' => $form])
         </div>
       </div>
