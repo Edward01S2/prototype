@@ -299,10 +299,11 @@
 }
 
 #gform_4 {
+  @apply text-p-gray-300;
   ul {
-    @apply list-none ml-0;
+    @apply list-none ml-0 text-p-gray-300;
     li {
-      @apply ml-0 mb-4;
+      @apply ml-0 mb-4 text-p-gray-300;
       text-indent: 0;
       &:before {
         @apply p-0;
