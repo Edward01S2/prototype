@@ -19,6 +19,8 @@ use StoutLogic\AcfBuilder\FieldsBuilder;
  */
 add_action('wp_enqueue_scripts', function () {
     wp_enqueue_script('sage/vendor.js', asset('scripts/vendor.js')->uri(), ['jquery'], null, true);
+    // wp_enqueue_style( 'google_fonts', '//fonts.googleapis.com/css?family=Montserrat:400,600,700', false, null );
+
     wp_enqueue_script('sage/app.js', asset('scripts/app.js')->uri(), ['sage/vendor.js', 'jquery'], null, true);
 
     wp_add_inline_script('sage/vendor.js', asset('scripts/manifest.js')->contents(), 'before');

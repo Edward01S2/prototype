@@ -24,6 +24,8 @@ class App extends Composer
     {
         return [
             'siteName' => $this->siteName(),
+            'head_scripts' => get_field('header_scripts', 'option'),
+            'foot_scripts' => get_field('footer_scripts', 'option'),
         ];
     }
 

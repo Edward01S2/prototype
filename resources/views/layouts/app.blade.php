@@ -25,5 +25,6 @@
     </div>
 
     @php(wp_footer())
+    {!! $foot_scripts !!}
   </body>
 </html>
