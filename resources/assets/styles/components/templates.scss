@@ -6,17 +6,17 @@
   @apply text-p-gray-100;
   .wp-block-group {
     h2 {
-      @apply font-semibold text-3xl uppercase tracking-wide mb-2;
+      @apply font-bold text-3xl uppercase tracking-wide mb-2;
     }
   }
   p {
     @apply mb-4 leading-7;
   }
   h2 {
-    @apply font-semibold text-xl my-4 text-p-gray-300;
+    @apply font-bold text-xl my-4 text-p-gray-300;
   }
   strong {
-    @apply font-semibold text-p-gray-300;
+    @apply font-bold text-p-gray-300;
   }
 }
 
