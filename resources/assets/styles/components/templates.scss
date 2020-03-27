@@ -174,8 +174,17 @@
 
 //Courses Template
 .course-content {
+  @apply text-p-gray-300;
   ul {
-    @apply list-disc ml-4;
+    @apply ml-4;
+    li {
+      @apply mb-2 ml-2 text-p-gray-100;
+      text-indent: -1rem;
+      &:before {
+        @apply text-p-blue-200 pr-2;
+        content: "•";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+      }
+    }
   }
   .gform_fields {
     @apply ml-0 list-none;
