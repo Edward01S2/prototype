@@ -116,6 +116,10 @@
   }
 }
 
+.gform_confirmation_message_1 {
+  @apply text-center;
+}
+
 @screen md {
   #gform_wrapper_1 {
     @apply mx-auto max-w-2xl relative;

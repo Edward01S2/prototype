@@ -20,7 +20,7 @@
               {!! the_post_thumbnail() !!}
             </div>
             <div class="text-center lg:order-1 md:text-left md:py-8 lg:py-0">
-              <div class="uppercase text-sm">Courses / <span class="font-semibold">{!! $cat[0]->name !!}</span></div>
+              <div class="uppercase text-sm">Courses / <span class="font-semibold">{!! get_the_title() !!}</span></div>
               <h2 class="uppercase font-semibold tracking-wider text-4xl py-1 leading-none text-white mb-0 md:py-2 lg:w-96 lg:py-4 xl:w-124 xl:text-5xl">{!! get_the_title() !!}</h2>
               <div class="flex items-center text-sm justify-center md:justify-start">
                 <svg class="h-4 w-4 fill-current mr-2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20"><path d="M10 20a10 10 0 1 1 0-20 10 10 0 0 1 0 20zm0-2a8 8 0 1 0 0-16 8 8 0 0 0 0 16zm-1-7.59V4h2v5.59l3.95 3.95-1.41 1.41L9 10.41z"/></svg>

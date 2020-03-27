@@ -28,6 +28,7 @@ mix.sass('resources/assets/styles/app.scss', 'styles')
    })
    .purgeCss({
       whitelist: [
+         'pt-12',
          whitelister(
             './resources/assets/styles/partials/header.scss'
          )
