@@ -1,5 +1,36 @@
 /* purgecss start ignore */
 
+
+.wp-block-group__inner-container {
+  @apply w-full mx-auto px-4;
+}
+
+@screen sm {
+  .wp-block-group__inner-container {
+    @apply px-6;
+    max-width: 640px;
+  }
+}
+
+@screen md {
+  .wp-block-group__inner-container {
+    max-width: 768px;
+  }
+}
+
+@screen lg {
+  .wp-block-group__inner-container {
+    @apply px-8;
+    max-width: 1024px;
+  }
+}
+
+@screen xl {
+  .wp-block-group__inner-container {
+    max-width: 1280px;
+  }
+}
+
 //About Template
 
 .about-content {
@@ -312,4 +343,26 @@
   }
 }
 
+//Page Developer Resources
+.developer-content {
+  h2 {
+    @apply text-4xl leading-tight mt-12 tracking-wider max-w-xs font-semibold; 
+  }
+}
+
+@screen md {
+  .developer-content {
+    h2 {
+      @apply text-5xl mt-16; 
+    }
+  }
+}
+
+@screen lg {
+  .developer-content {
+    h2 {
+      @apply text-5xl; 
+    }
+  }
+}
 /* purgecss end ignore */

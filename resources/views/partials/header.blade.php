@@ -5,7 +5,7 @@
         <div class="flex items-center">
           <div class="flex-shrink-0">
             <a href="{{ home_url('/') }}">
-              <img class="block h-16 w-auto" src="{!! $logo['url'] !!}" alt="{{ $siteName }}" />
+              <img class="block h-10 w-auto lg:h-12" src="{!! $logo['url'] !!}" alt="{{ $siteName }}" />
             </a>
           </div>
         </div>
@@ -29,13 +29,13 @@
                         <div class="py-1 rounded-md rounded-tl-none bg-white">
                           @foreach($children as $item)
                           @php $classes = $item['classes'] ? $item['classes'] . ' ' : ''; @endphp
-                            <a href="{!! $item['url'] !!}" class="{!! $classes !!}block px-4 py-2 text-sm leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out">{!! $item['title'] !!}</a>
+                            <a href="{!! $item['url'] !!}" class="{!! $classes !!}block px-4 py-2 text-sm font-semibold leading-5 text-gray-700 hover:bg-gray-100 focus:outline-none focus:bg-gray-100 transition duration-150 ease-in-out">{!! $item['title'] !!}</a>
                           @endforeach
                         </div>
                       </div>
                     </div>
                   @else
-                    <a href="{!! $item['url'] !!}" class="{!! $classes !!}ml-4 px-3 py-2 rounded-md text-sm font-semibold leading-5 text-gray-300 uppercase hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">{!! $item['title'] !!}</a>
+                    <a href="{!! $item['url'] !!}" class="{!! $classes !!}ml-4 px-3 py-2 rounded-md text-sm leading-5 text-gray-300 uppercase hover:text-white hover:bg-gray-700 focus:outline-none focus:text-white focus:bg-gray-700 transition duration-150 ease-in-out">{!! $item['title'] !!}</a>
                   @endif
                 @endforeach
               </div>

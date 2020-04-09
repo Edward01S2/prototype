@@ -25,6 +25,8 @@ class Header extends Composer
       $array_menu = wp_get_nav_menu_items( $menu->term_id, array( 'order' => 'DESC' ) );
       // $array_menu = wp_get_nav_menu_items($menu_name);
         $menu = array();
+        $active = ( isset($_SERVER['HTTPS'] ) ) ? 'https' : 'http';
+        $active .= '://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]';
         foreach ($array_menu as $m) {
             if (empty($m->menu_item_parent)) {
                 $menu[$m->ID] = array();
@@ -39,7 +41,8 @@ class Header extends Composer
                 }
                 
                 //Check current requested url against url and add class active if true
-                if(($active = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]")  == $m->url) {
+                
+                if($active == $m->url) {
                   //$menu[$m->ID]['active'] = $active;
                   if(isset($classes)) {
                     array_push($classes, 'active');
@@ -58,12 +61,15 @@ class Header extends Composer
                 $submenu[$m->ID]['ID']       =   $m->ID;
                 $submenu[$m->ID]['title']    =   $m->title;
                 $submenu[$m->ID]['url']      =   $m->url;
+                
+                $classes = [];
+                
                 if($m->classes[0] !== "") {
                   $classes = $m->classes;
                   //$submenu[$m->ID]['classes'] = implode(" ", $classes);
                 }
 
-                if(($active = "https://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]") == $m->url) {
+                if( $active == $m->url) {
                   //$menu[$m->ID]['active'] = $active;
                   if(isset($classes)) {
                     array_push($classes, 'active');
