@@ -12,7 +12,7 @@
             @if($resource['Links'])
               @foreach($resource['Links'] as $link)
                 @if($link['Link'])
-                  <li class="mb-2"><a href="" class="underline text-white hover:text-p-orange font-semibold tracking-wide leading-tight">{!! $link['Link']['title']!!}</a></li>
+                  <li class="mb-2"><a href="{!! $link['Link']['url'] !!}" target="_blank" class="underline text-white hover:text-p-orange font-semibold tracking-wide leading-tight">{!! $link['Link']['title']!!}</a></li>
                 @endif
               @endforeach
             @endif
