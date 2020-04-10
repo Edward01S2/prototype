@@ -26,6 +26,7 @@ module.exports = {
       'p-orange': '#e79948',
       'p-orange-200': '#d4791b',
       'p-blue': {
+        50: '#dbf3f7',
         100: '#EBF4FF',
         200: '#00abc6',
         300: '#119c9e'

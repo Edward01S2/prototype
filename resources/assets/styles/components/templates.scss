@@ -216,6 +216,13 @@
         content: "•";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
       }
     }
+    li {
+      &:before {
+        content: " ";
+        @apply h-12 w-12 bg-center bg-no-repeat bg-contain mr-2;
+        background-image: url('../images/circle.svg');
+      }
+    }
   }
   .gform_fields {
     @apply ml-0 list-none;
@@ -245,6 +252,18 @@
       @apply w-full mx-auto px-4;
     }
   }
+  .faq-content {
+    ul {
+      @apply bg-p-blue-50 ml-0 p-4 pl-6 rounded;
+    }
+    li {
+      &:before {
+        content: " ";
+        @apply h-12 w-12 bg-center bg-no-repeat bg-contain mr-2;
+        background-image: url('../images/circle.svg');
+      }
+    }
+  }
 }
 
 @screen sm {
@@ -252,6 +271,20 @@
     .wp-block-group__inner-container {
       @apply px-6;
       max-width: 640px;
+    }
+  }
+  .course-content {
+    .faq-content {
+      ul {
+        @apply bg-p-blue-50 ml-0 p-6 pl-8 rounded;
+      }
+      li {
+        &:before {
+          content: " ";
+          @apply h-12 w-12 bg-center bg-no-repeat bg-contain mr-2;
+          background-image: url('../images/circle.svg');
+        }
+      }
     }
   }
 }
