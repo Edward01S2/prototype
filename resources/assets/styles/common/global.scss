@@ -5,6 +5,7 @@
 html {
   @apply font-mont;
   scroll-behavior: smooth;
+  padding: env(safe-area-inset);
 }
 
 p {

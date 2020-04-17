@@ -1,17 +1,17 @@
 <header>
-  <nav x-data="{ open: false }" class="bg-black">
+  <nav x-data="{ open: false }" class="bg-black relative">
     <div class="container mx-auto px-4 sm:px-6 lg:px-8">
       <div class="flex items-center justify-between h-20">
         <div class="flex items-center">
           <div class="flex-shrink-0">
             <a href="{{ home_url('/') }}">
-              <img class="block h-10 w-auto lg:h-12" src="{!! $logo['url'] !!}" alt="{{ $siteName }}" />
+              <img class="block h-10 w-auto lg:h-12 transform hover:scale-105 transiton duration-150" src="{!! $logo['url'] !!}" alt="{{ $siteName }}" />
             </a>
           </div>
         </div>
         <div class="hidden sm:ml-6 sm:block">
           <div class="flex items-center">
-            <div class="hidden sm:block sm:ml-6">
+            <div class="hidden lg:block sm:ml-6">
               <div class="flex">
                 @foreach($nav as $item)
                   @php $classes = $item['classes'] ? $item['classes'] . ' ' : ''; @endphp
@@ -42,7 +42,7 @@
             </div>
           </div>
         </div>
-        <div class="-mr-2 flex sm:hidden">
+        <div class="-mr-2 flex lg:hidden">
           <button @click="open = !open" class="inline-flex items-center justify-center p-2 rounded-md text-gray-400 hover:text-white hover:bg-gray-700 focus:outline-none focus:bg-gray-700 focus:text-white transition duration-150 ease-in-out">
             <svg class="h-6 w-6" stroke="currentColor" fill="none" viewBox="0 0 24 24">
               <path :class="{'hidden': open, 'inline-flex': !open }" class="inline-flex" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16" />
@@ -52,7 +52,7 @@
         </div>
       </div>
     </div>
-    <div :class="{'block': open, 'hidden': !open}" class="hidden sm:hidden" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95">
+    <div :class="{'block': open, 'hidden': !open}" class="hidden md:absolute md:right-0 md:w-5/12 md:bg-black md:z-30 lg:hidden" x-transition:enter="transition ease-out duration-100" x-transition:enter-start="transform opacity-0 scale-95" x-transition:enter-end="transform opacity-100 scale-100" x-transition:leave="transition ease-in duration-75" x-transition:leave-start="transform opacity-100 scale-100" x-transition:leave-end="transform opacity-0 scale-95">
       <div @click.away="open = false" class="px-2 pt-2 pb-3">
         @foreach($nav as $item)
         @php $classes = $item['classes'] ? $item['classes'] . ' ' : ''; @endphp
